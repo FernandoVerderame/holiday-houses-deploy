@@ -1,0 +1,114 @@
+.navInfo {
+    display: flex;
+    gap: 50px;
+    text-transform: uppercase;
+
+    li {
+        padding: 10px 0;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .active {
+        border-bottom: 2px solid #c6a47e;
+        font-weight: bold;
+    }
+}
+
+.description,
+.additional,
+.reviews {
+    color: #909090;
+    padding-top: 30px;
+    border-top: 1px solid rgb(155, 155, 155);
+    line-height: 25px;
+}
+
+.payment {
+    display: flex;
+
+    img {
+        height: 60px;
+        width: auto;
+    }
+
+    .mastercard {
+        padding: 10px 0;
+    }
+}
+
+.services {
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.cardInfo {
+    background-color: #222222;
+    color: white;
+    padding: 40px 30px;
+
+    h3 {
+        font-size: 30px;
+        margin: 0;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .btnCard {
+        color: white;
+        background-color: #c6a47e;
+        text-align: center;
+        margin: 40px 0;
+        padding: 12px 20px;
+    }
+
+    ul {
+        display: flex;
+        gap: 20px;
+
+        li {
+            font-weight: 500;
+
+            span {
+                color: #c6a47e;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.cardReview {
+    margin-bottom: 40px;
+    padding: 20px 30px;
+    box-shadow: 3px 20px 62px -25px #000;
+
+    .title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    .stars {
+        display: flex;
+        gap: 2px;
+
+        .filledStar {
+            font-size: 20px;
+            color: #c6a47e;
+        }
+
+        .emptyStar {
+            font-size: 20px;
+            color: #ccc;
+        }
+    }
+
+    .description {
+        margin-bottom: 0;
+        padding: 0;
+        border-top: none;
+    }
+}

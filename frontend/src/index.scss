@@ -1,0 +1,484 @@
+@import "bootstrap/scss/bootstrap";
+
+html {
+    scroll-behavior: auto;
+}
+
+.bg-gray {
+    background-color: rgb(226, 226, 226);
+}
+
+.quote {
+    font-size: 15px;
+    position: relative;
+    bottom: 10px;
+}
+
+.container-home {
+    width: 1600px;
+}
+
+.button {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 28px;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    &:hover {
+        opacity: 0.8;
+        color: white;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+#jumbotron {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('./assets/images/jumbo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+#jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sec-title {
+    margin-left: 60px;
+    color: white;
+
+    position: absolute;
+    bottom: 43%;
+
+    @media (max-width: 767px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .home-title {
+        font-size: 60px;
+        z-index: 1;
+        margin: 0;
+
+        i {
+            font-size: 45px;
+            font-weight: 400;
+        }
+    }
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 35px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+
+    .about {
+        color: black;
+        background-color: white;
+    }
+
+    .apartments {
+        color: white;
+        background: none;
+        border: 1px solid white;
+    }
+}
+
+#apartments {
+    padding: 80px 0;
+
+    h2 {
+        font-size: 45px;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 45px;
+    }
+}
+
+#apartment-info {
+    padding: 80px 0;
+}
+
+#choose-us {
+    padding: 80px 0;
+    background-color: #F5F5F5;
+    text-align: center;
+
+    h2 {
+        font-size: 45px;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 45px;
+    }
+
+    .card {
+        border: none;
+        background: none;
+
+        .icon {
+            color: #c6a47e;
+            display: flex;
+            justify-content: center;
+        }
+
+        h5 {
+            margin: 18px 0;
+        }
+
+        p {
+            color: rgb(124, 124, 124);
+            line-height: 25px;
+            font-size: 15px;
+        }
+    }
+}
+
+#apartment-gallery {
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#contact-us-jumbo {
+    background-image: url('./assets/images/jumbo-contact-us.jpg');
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 480px;
+
+    h1 {
+        color: white;
+        font-size: 60px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    p {
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+#contact-us-info {
+    padding-bottom: 80px;
+    text-align: center;
+
+    .card-info {
+        background-color: white;
+        padding: 40px 30px;
+        box-shadow: 3px 20px 62px -25px #000;
+        position: relative;
+        bottom: 35px;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 45px;
+    }
+
+    .card {
+        border: none;
+        background: none;
+
+        .icon {
+            color: #c6a47e;
+            display: flex;
+            justify-content: center;
+        }
+
+        h5 {
+            font-size: 20px;
+            margin: 18px 0;
+        }
+
+        p {
+            color: rgb(124, 124, 124);
+            line-height: 25px;
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+#contact-form {
+    padding-bottom: 100px;
+
+    input,
+    textarea {
+        border-radius: 0%;
+        border: 1px solid lightgray;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border: 1px solid #c6a47e;
+        box-shadow: 0 0 2px #c6a47e;
+    }
+}
+
+#send-review-jumbo {
+    background-image: url('./assets/images/jumbo-send-review.jpg');
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 480px;
+
+    h1 {
+        color: white;
+        font-size: 60px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    p {
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+#contact-us-jumbo::before,
+#send-review-jumbo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#review-form {
+    padding: 100px 0;
+
+    input,
+    textarea,
+    select {
+        border-radius: 0%;
+        border: 1px solid lightgray;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border: 1px solid #c6a47e;
+        box-shadow: 0 0 2px #c6a47e;
+    }
+}
+
+#apartment-map {
+    padding: 80px 0;
+    background-color: #F5F5F5;
+
+    .map {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid lightgray;
+        box-shadow: 3px 20px 62px -25px #000;
+    }
+
+    .red-overlay {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 0, 0, 0.5);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+}
+
+#not-found {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 50px;
+        letter-spacing: 2px;
+
+        span {
+            color: #c6a47e;
+            font-size: 150px;
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .button {
+        background-color: #222222;
+        color: white;
+    }
+}
+
+#reviews {
+    padding: 80px 0;
+    background-color: #F5F5F5;
+    text-align: center;
+
+    h2 {
+        font-size: 45px;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 45px;
+    }
+
+    .card {
+        border: none;
+        background: none;
+    }
+}
+
+#login {
+    height: calc(100vh - 110px);
+
+    .card {
+        box-shadow: 3px 20px 62px -25px #000;
+    }
+}
+
+.dashboard-wrapper {
+    .bottom-content {
+        height: calc(100vh - 60px);
+        overflow: auto;
+    }
+
+    .sidebar {
+        color: white;
+        background-color: #051E34;
+        flex-basis: 170px;
+        flex-shrink: 0;
+        padding: 30px 20px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .sidebar {
+            flex-basis: 20px;
+        }
+    }
+
+    main {
+        flex-grow: 1;
+        overflow: auto;
+    }
+}
+
+#dashboard-apartments,
+#dashboard-messages,
+#dashboard-reviews,
+#dashboard-gallery {
+    background-color: #1b72e8;
+
+    .star-position {
+        position: relative;
+        bottom: 2px;
+    }
+
+    .table-img {
+        width: 100px;
+        height: 90px;
+    }
+
+    td,
+    th {
+        vertical-align: middle;
+        text-align: start;
+    }
+}
+
+#create-apartment,
+#edit-apartment,
+#create-image {
+    .header-main {
+        background-color: #1b72e8;
+    }
+}
+
+#dashboard-gallery {
+    .card {
+        position: relative;
+
+        .delete-btn {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            padding: 0;
+
+            .icon-btn {
+                font-size: 17px;
+                position: relative;
+                bottom: 2px;
+                color: white;
+            }
+        }
+    }
+}

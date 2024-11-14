@@ -1,0 +1,113 @@
+.gallery {
+    width: 100%;
+
+    .thumb {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        // Effetto di hover: zoom e overlay
+        &:hover img {
+            transform: scale(1.05); // leggero zoom
+        }
+
+        // Overlay scuro con icona
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); // overlay scuro
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        // Icona di ingrandimento
+        &::after {
+            content: "🔍"; // Icona di ingrandimento, sostituibile con una diversa
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        // Mostra overlay e icona al hover
+        &:hover::before,
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+}
+
+.next,
+.prev {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.next::after,
+.prev::after {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+
+    img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+    }
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

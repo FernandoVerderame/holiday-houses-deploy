@@ -1,0 +1,56 @@
+.cardReview {
+    margin-bottom: 60px;
+
+    .title {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    .stars {
+        display: flex;
+        gap: 5px;
+
+        .filledStar {
+            font-size: 30px;
+            color: #c6a47e;
+        }
+
+        .emptyStar {
+            font-size: 30px;
+            color: #ccc;
+        }
+    }
+
+
+    .description {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 15px 0;
+    }
+
+    .author {
+        font-size: 22px;
+        text-transform: uppercase;
+        color: #c6a47e;
+        letter-spacing: 2px;
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+
+    .country {
+        font-size: 18px;
+        color: #909090;
+        font-style: italic;
+    }
+
+    .pagination {
+        position: static;
+    }
+}
+
+.btn {
+    color: white;
+    background-color: #c6a47e;
+    margin-top: 50px;
+}
