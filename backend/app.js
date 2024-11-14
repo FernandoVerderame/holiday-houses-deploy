@@ -2,28 +2,25 @@
 const express = require('express');
 const dotenv = require("dotenv");
 
+// Importo Cors
+const cors = require("cors");
+
 // Importo i ruoters
 const apartmentsRouter = require("./routers/apartments.js");
-
 const servicesRouter = require("./routers/services.js");
-
 const messagesRouter = require("./routers/messages.js");
-
 const imagesRouter = require("./routers/images.js");
-
-const reviewsRouter = require("./routers/reviews.js")
-
+const reviewsRouter = require("./routers/reviews.js");
 const authRouter = require("./routers/auth.js");
 
 // Importo i middlewares
 const errorHandler = require("./middlewares/errorHandler.js");
 const notFound = require("./middlewares/notFound.js");
 
+dotenv.config();
+
 // Inizializzo express
 const app = express();
-
-// Importo Cors
-const cors = require("cors");
 
 app.use(cors());
 
@@ -31,13 +28,11 @@ app.use(cors());
 const port = process.env.PORT || 3000;
 const host = process.env.HOST || "localhost";
 
-dotenv.config();
+// application/json
+app.use(express.json());
 
 // Cartella public per l'upload
 app.use(express.static("public"));
-
-// application/json
-app.use(express.json());
 
 // Rotte autenticazione
 app.use('/auth', authRouter);
@@ -63,7 +58,4 @@ app.use(notFound);
 // errorHandler
 app.use(errorHandler);
 
-// Avvio il server
-app.listen(port, host, () => {
-    console.log(`Server avviato su http://${host}:${port}`);
-});
+module.exports = app;
