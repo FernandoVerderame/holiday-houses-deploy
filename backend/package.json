@@ -6,8 +6,7 @@
   "scripts": {
     "build": "prisma generate",
     "dev": "nodemon app.js",
-    "migrate": "prisma migrate dev --name",
-    "start": "node app.js"
+    "migrate": "prisma migrate dev --name"
   },
   "keywords": [],
   "author": "",

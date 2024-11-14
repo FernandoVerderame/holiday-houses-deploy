@@ -6,14 +6,6 @@
             "use": "@vercel/node"
         }
     ],
-    "build": {
-        "env": {
-            "DATABASE_URL": "mysql://root:root@localhost:3306/HH-deploy"
-        },
-        "commands": [
-            "npm run build"
-        ]
-    },
     "routes": [
         {
             "src": "/(.*)",
