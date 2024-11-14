@@ -4,8 +4,10 @@
   "description": "HolidayHouses",
   "main": "app.js",
   "scripts": {
+    "build": "prisma generate",
     "dev": "nodemon app.js",
-    "migrate": "prisma migrate dev --name"
+    "migrate": "prisma migrate dev --name",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
